@@ -17,7 +17,7 @@ class BookControllerScala {
   @GetMapping(path = Array("/books"))
   def getBooks: ResponseEntity[String] = {
 
-    val bookList = BookScala(UUID.randomUUID(), "Harry Potter y el paro escolar") :: BookScala(UUID.randomUUID(), "Harry Potter y la jornada completa") :: List()
+    val bookList = Array(BookScala(UUID.randomUUID(), "Harry Potter y el paro escolar"), BookScala(UUID.randomUUID(), "Harry Potter y la jornada completa"))
 
     new ResponseEntity[String](compactRender(parse(gson.toJson(bookList))), HttpStatus.OK)
 
