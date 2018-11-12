@@ -4,7 +4,6 @@ import java.util.UUID
 
 import com.google.gson.Gson
 import com.onimurasame.langspoc.data.BookScala
-import net.liftweb.json._
 import org.springframework.http.{HttpStatus, MediaType, ResponseEntity}
 import org.springframework.web.bind.annotation.{GetMapping, RequestMapping, RestController}
 
@@ -19,7 +18,7 @@ class BookControllerScala {
 
     val bookList = Array(BookScala(UUID.randomUUID(), "Harry Potter y el paro escolar"), BookScala(UUID.randomUUID(), "Harry Potter y la jornada completa"))
 
-    new ResponseEntity[String](compactRender(parse(gson.toJson(bookList))), HttpStatus.OK)
+    new ResponseEntity[String](gson.toJson(bookList), HttpStatus.OK)
 
   }
 

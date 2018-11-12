@@ -51,9 +51,10 @@ dependencies {
 	implementation('org.scala-lang:scala-library:2.12.2')
 	implementation('org.springframework.boot:spring-boot-starter-web')
 	implementation('com.google.code.gson:gson:2.7')
-	implementation('net.liftweb:lift-json_2.12:3.3.0')
+	implementation('org.codehaus.groovy:groovy-all:2.5.3')
 
-
+	implementation('io.springfox:springfox-swagger2:2.9.2')
+	implementation('io.springfox:springfox-swagger-ui:2.9.2')
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
